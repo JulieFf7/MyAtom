@@ -1,0 +1,33 @@
+'.source.shell':
+
+  'bash start':
+    'prefix': 'bstart'
+    'body': """
+            #!/usr/bin/env bash
+
+            error() { \
+            clear; printf "ERROR:\\n%s\\n" "$1" >&2; exit 1;
+            }
+            """
+
+  'dialog msgbox':
+    'prefix': 'dmsg'
+    'body': 'dialog --colors --title "   " -msgbox "  " 16 60'
+
+
+   'dialog yesno':
+      'prefix': 'dyesno'
+      'body': 'dialog --colors --title "   " --yes-label "   " --no-label "  " --yesno "   " 8 80'
+
+
+
+  'if than else':
+    'prefix': 'ite'
+    'body': """
+      if [     ]
+        then
+
+        else
+
+      fi
+      """
